@@ -11,12 +11,12 @@ public final class Display {
     /**
      * The background color.
      */
-    private static final Color BACKGROUND = new Color(0x218C8D);
+    private static final Color BACKGROUND = new Color(0.13f, 0.55f, 0.55f , 0f);
 
     /**
      * The foreground color.
      */
-    private static final Color FOREGROUND = new Color(0x6CCECB);
+    private static final Color FOREGROUND = new Color(0.42f, 0.81f, 0.80f, 0f);
 
     /**
      * The width of the display in pixels.
