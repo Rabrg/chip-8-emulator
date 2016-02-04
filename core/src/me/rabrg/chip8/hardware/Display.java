@@ -42,7 +42,7 @@ public final class Display {
      * The camera for inverting the y-axis.
      */
     private final OrthographicCamera camera = new OrthographicCamera();
-    
+
     /**
      * Whether or not the display gets updated the next cycle.
      */
