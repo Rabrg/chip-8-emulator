@@ -35,7 +35,7 @@ public final class CHIP8Emulator extends ApplicationAdapter {
         display = new Display();
         keyboard = new Keyboard();
 
-        processor.loadROM("INVADERS");
+        processor.loadROM("BREAKOUT");
 
         Gdx.input.setInputProcessor(keyboard);
     }
