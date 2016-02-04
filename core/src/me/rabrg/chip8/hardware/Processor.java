@@ -149,6 +149,8 @@ public final class Processor {
             pc = ROM_START;
             i = sp = dt = st = 0;
 
+            emulator.getDisplay().clear();
+
             final byte[] rom = Gdx.files.internal(dir).readBytes();
             for (int i = 0; i < rom.length; i++)
                 memory[i + ROM_START] = rom[i] & 0xFF;
