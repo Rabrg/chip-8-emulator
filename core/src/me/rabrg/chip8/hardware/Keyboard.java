@@ -7,12 +7,12 @@ import com.badlogic.gdx.InputAdapter;
 public final class Keyboard extends InputAdapter {
 
     /**
-     * The state of all keys
+     * The state of all keys.
      */
     private final boolean[] keys = new boolean[0x10];
 
     /**
-     * Whether or not a key has been pressed
+     * Whether or not a key has been pressed.
      */
     private boolean pressed;
 
