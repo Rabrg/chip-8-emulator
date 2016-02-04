@@ -29,11 +29,6 @@ public final class Display {
     public static int HEIGHT = 32;
 
     /**
-     * The scale of the display.
-     */
-    public static int SCALE = 8;
-
-    /**
      * The pixel values of the display.
      */
     private final int[][] values = new int[HEIGHT][WIDTH];
@@ -47,11 +42,14 @@ public final class Display {
      * The camera for inverting the y-axis.
      */
     private final OrthographicCamera camera = new OrthographicCamera();
-
     /**
      * Whether or not the display gets updated the next cycle.
      */
     public boolean render;
+    /**
+     * The scale of the display.
+     */
+    private int scale;
 
     /**
      * Renders the display if the render flag is true.
@@ -65,7 +63,7 @@ public final class Display {
             for (int y = 0; y < values.length; y++) {
                 for (int x = 0; x < values[y].length; x++) {
                     shapeRenderer.setColor(values[y][x] > 0 ? FOREGROUND : BACKGROUND);
-                    shapeRenderer.rect(x * SCALE, y * SCALE, SCALE, SCALE);
+                    shapeRenderer.rect(x * scale, y * scale, scale, scale);
                 }
             }
             shapeRenderer.end();
@@ -112,6 +110,8 @@ public final class Display {
      * @param height The height.
      */
     public void resize(final int width, final int height) {
+        scale = Math.min(width / WIDTH, height / HEIGHT);
         camera.setToOrtho(true, width, height);
+        camera.update();
     }
 }
