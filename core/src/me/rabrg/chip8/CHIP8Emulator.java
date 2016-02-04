@@ -32,9 +32,10 @@ public final class CHIP8Emulator extends ApplicationAdapter {
     @Override
     public void create() {
         processor = new Processor(this);
-        processor.loadROM("INVADERS");
         display = new Display();
         keyboard = new Keyboard();
+
+        processor.loadROM("INVADERS");
 
         Gdx.input.setInputProcessor(keyboard);
     }
