@@ -9,6 +9,11 @@ import me.rabrg.chip8.CHIP8Emulator;
 public final class Processor {
 
     /**
+     * The CPU cycle rate in milliseconds.
+     */
+    public static final int CYCLE_RATE = 1000 / 500;
+
+    /**
      * The random instance for opcode CXNN.
      */
     private static final Random RANDOM = new Random();
@@ -34,12 +39,6 @@ public final class Processor {
             0xF0, 0x80, 0xF0, 0x80, 0xF0, // E
             0xF0, 0x80, 0xF0, 0x80, 0x80  // F
     };
-
-    /**
-     * The CPU cycle rate in milliseconds.
-     */
-    public static final int CYCLE_RATE = 1000 / 500;
-
     /**
      * The update rate for timers and repainting in milliseconds.
      */
@@ -107,6 +106,7 @@ public final class Processor {
 
     /**
      * Constructs a new processor for the specified emulator.
+     *
      * @param emulator The emulator.
      */
     public Processor(final CHIP8Emulator emulator) {
@@ -135,6 +135,7 @@ public final class Processor {
 
     /**
      * Loads the ROM at the specified directory.
+     *
      * @param dir The directory.
      */
     public void loadROM(final String dir) {
@@ -161,6 +162,7 @@ public final class Processor {
 
     /**
      * Decodes the specified opcode.
+     *
      * @param opcode The opcode.
      */
     private void decode(final int opcode) {

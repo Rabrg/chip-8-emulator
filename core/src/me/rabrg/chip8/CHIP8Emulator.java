@@ -53,6 +53,7 @@ public final class CHIP8Emulator extends ApplicationAdapter {
 
     /**
      * Sleeps if necessary to match the specified cycle rate.
+     *
      * @param cycleRate The cycle rate.
      */
     private void sleep(final int cycleRate) {
@@ -69,6 +70,7 @@ public final class CHIP8Emulator extends ApplicationAdapter {
 
     /**
      * Gets the keyboard.
+     *
      * @return The keyboard.
      */
     public Keyboard getKeyboard() {
@@ -77,6 +79,7 @@ public final class CHIP8Emulator extends ApplicationAdapter {
 
     /**
      * Gets the display.
+     *
      * @return The display.
      */
     public Display getDisplay() {

@@ -11,7 +11,7 @@ public final class Display {
     /**
      * The background color.
      */
-    private static final Color BACKGROUND = new Color(0.13f, 0.55f, 0.55f , 0f);
+    private static final Color BACKGROUND = new Color(0.13f, 0.55f, 0.55f, 0f);
 
     /**
      * The foreground color.
@@ -74,8 +74,9 @@ public final class Display {
 
     /**
      * Draws the specified sprite at the specified coordinates.
-     * @param x The x coordinate.
-     * @param y The y coordinate.
+     *
+     * @param x      The x coordinate.
+     * @param y      The y coordinate.
      * @param sprite The sprite.
      * @return Whether or not a pixel was erased.
      */
@@ -106,7 +107,8 @@ public final class Display {
 
     /**
      * Resizes the display to the specified width and height.
-     * @param width The width.
+     *
+     * @param width  The width.
      * @param height The height.
      */
     public void resize(final int width, final int height) {
